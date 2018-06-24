@@ -2,9 +2,9 @@
 import RPi.GPIO as GPIO
 import time
 
-#LedPin = 11 # pin11
+LedPin = 11 # pin11
 ButtonPin = 13
-#Warten = 0.04
+Warten = 0.04
 
 def setup():
   GPIO.setmode(GPIO.BOARD)
