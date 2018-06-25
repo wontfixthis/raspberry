@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# raspberry pi 3
 import RPi.GPIO as GPIO
 import time
 
@@ -16,10 +17,10 @@ def loop():
       if GPIO.input(ButtonPin) == 1:
           print '...led on'
           GPIO.output(LedPin, GPIO.HIGH) # turn led on
-          time.sleep(0.05)
+          time.sleep(0.05) # without sleep, the LED don't get off sometimes
           if GPIO.input(ButtonPin) == 0:
             print '...led off'
-            GPIO.output(LedPin, GPIO.LOW) # rutn led on
+            GPIO.output(LedPin, GPIO.LOW) # turn led off
 
 def destroy():
   GPIO.output(LedPin, GPIO.HIGH) # led off
